@@ -75,7 +75,7 @@ class Pokemon:
             self.last_feed_time = current_time
             return f"Pokémon sağlığı geri yüklenir. Mevcut sağlık: {self.hp}"
         else:
-            return f"Pokémonunuzu şu zaman besleyebilirsiniz: {current_time+delta_time}"
+            return f"Pokémonunuzu şu zaman besleyebilirsiniz: {self.last_feed_time+delta_time}"
   
 class Wizard(Pokemon):
     async def attack(self, enemy):
